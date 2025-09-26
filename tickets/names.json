@@ -77,5 +77,21 @@
 {"name":"7499473009","file":"7499473009.png"},
 {"name":"8483006377","file":"8483006377.png"}
 
+
+
+
+function showCard(item) {
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = `
+    <h3>${item.name}</h3>
+    <img src="${BASE + item.file}" alt="${item.name}" />
+    <a class="download-btn" href="${BASE + item.file}" download="${item.name}.png">Download Ticket</a>
+  `;
+  return div;
+}
+
+
+
 ]
 
