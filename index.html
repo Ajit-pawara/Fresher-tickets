@@ -227,6 +227,28 @@
       function search(){
         result.innerHTML = "";
         const v = normalize(q.value);
+
+
+
+        //to avoid empty search
+
+if (!v) {
+  result.innerHTML = "<p style='text-align:center;color:var(--muted);margin-top:10px;'>⚠️ Please enter your phone number.</p>";
+  return;
+}
+
+
+
+
+
+
+
+        
+
+
+
+
+        
         const found = index.filter(it => normalize(it.name).includes(v));
         if(found.length){
           found.forEach(it => result.appendChild(showCard(it)));
